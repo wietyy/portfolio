@@ -32,10 +32,13 @@ let amazingQuotes = [
     "// TODO: add more quotes",
     "insert explosion here",
     "why is this not centeredㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
-    "congratulations! you have just wasted 24 seconds of your life!"
+    "congratulations! you have just wasted 24 seconds of your life!",
+    "patience"
 ];
+
 let quoteIndex = 0;
 let motd = ref(amazingQuotes[quoteIndex]);
+let patienceActive = ref(false);
 let quoteTimer;
 onMounted(() => {
     quoteTimer = setInterval(() => {
@@ -46,6 +49,10 @@ onMounted(() => {
 onUnmounted(() => {
     clearInterval(quoteTimer);
 });
+function activatePatience() {
+    patienceActive.value = true;
+    document.title = "patience";
+}
 </script>
 
 <style scoped>
@@ -74,6 +81,24 @@ onUnmounted(() => {
         <p>don't worry about me. you can stay however long you want.</p>
     </div>
 
+    <div v-else-if="patienceActive" class="min-h-screen w-full bg-black flex flex-col items-center justify-center">
+        <p class="text-white">just a little while longer.</p>
+        <p>patience won't work this time. you can't ignore it anymore.</p>
+        <p class="text-white">then, finally, it will be over.</p>
+        <p>you know you can't win. might as well save time and get it over with.</p>
+        <p class="text-white">i know it's a bad idea.</p>
+        <p>just give up. like you always do, with everything else.</p>
+        <p class="text-slate-400">you can do this. come on.</p>
+        <p>but its true. if you would really get over it, then why am I still in your head? you know you can't shove me out. you've tried. i've watched you try.</p>
+        <p class="text-slate-700">i can beat this. come on, cub. get up and walk away.</p>
+        <p class="text-slate-700">just leave. it cant happen won't if you leave.</p>
+        <p>but you know, deep down, that it will when you come back.</p>
+        <p class="text-slate-800">i can't do it.</p>
+        <p>then let me. it will only be, just a little while longer.</p>
+        <p class="text-slate-900">fine. have your way.</p>
+        <p>do not worry. it will all be over soon.</p>
+    </div>
+
     <div v-else class="min-h-screen w-full bg-[#11111b] p-5 animate-fade-in">
         <!-- top bar -->
         <div class="p-1 sticky top-5 z-50 bg-[#1e1e2e] rounded">
@@ -93,12 +118,12 @@ onUnmounted(() => {
         </div>
 
         <!-- hero -->
-         <div class="bg-[#1e1e2e] mt-2.5 rounded p-5 min-h-[50vh] flex flex-col justify-center items-center"> <!--tag-->
+         <div class="bg-[#1e1e2e] mt-2.5 rounded p-5 min-h-[50vh] flex flex-col justify-center items-center">
             <h1 class="text-5xl text-[#cdd6f4]">Caleb Wietholter</h1>
             <Transition name="fade" mode="out-in">
-               <i :key="motd" class="text-[#cdd6f4] mt-3">{{ motd }}</i>
+               <a v-if="motd === 'patience'" key="patience-link" href="#" @click.prevent="activatePatience" class="text-[#cdd6f4] mt-3 underline">and sometimes, patience pays off</a>
+               <i v-else key="quote-text" class="text-[#cdd6f4] mt-3">{{ motd }}</i>
             </Transition>
          </div>
-         <div class="min-h-[250vh]"></div>
     </div>
 </template>
