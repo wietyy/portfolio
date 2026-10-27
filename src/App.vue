@@ -155,7 +155,7 @@ function activatePatience() {
                     <li class="ml-10">Redis</li>
                     <li class="ml-10">SQLite (for edge development and on-device applications)</li>
                 <li>Operating Systems</li>
-                        <img src="https://raw.githubusercontent.com/garrett/Tux/refs/heads/main/tux.svg" width="100" alt="my goat tux the penguin">
+                        <img src="https://raw.githubusercontent.com/garrett/Tux/refs/heads/main/tux.svg" width="100" alt="my goat tux the penguin" title="my goat tux the penguin">
                 <li>Deployment Systems</li>
                     <li class="ml-10">Docker / Podman</li>
                     <li class="ml-10">(currently learning) Kubernetes</li>
@@ -169,5 +169,20 @@ function activatePatience() {
                     <li class="ml-10">Can center a div (horizontally and vertically!)</li>
             </ul>
         </div>
+
+        <!-- Projects section (here we go) -->
+         <div id="projects" class="bg-[#1e1e2e] mt-2.5 rounded p-5">
+            <b class="text-4xl text-white">Projects</b>
+            <p class="text-[#cdd6f4]">Now THIS is what you're here for.</p>
+            <div class="flex justify-center mt-5">
+                <div class="bg-[#313244] p-5 mx-2.5 h-[50vh] max-w-[25vw] rounded-xl flex flex-col">
+                        <img src="./assets/john.png" alt="john demo image" class="rounded-lg max-h-1/2">
+                        <b class="text-4xl text-[#cdd6f4] flex justify-center">JOHN</b>
+                        <i class="text-[#cdd6f4] mt-2">"An incredibly badass way to keep track of your finances."</i>
+                        <p class="text-[#cdd6f4] mt-2">Stack: Vite/React (Frontend), Express/PostgreSQL (Backend)</p>
+                        <p class="text-[#cdd6f4] mt-2">A fully-featured finance tracker app inspired by my spreadsheet of 3+ years.</p>
+                </div>
+            </div>
+         </div>
     </div>
 </template>
