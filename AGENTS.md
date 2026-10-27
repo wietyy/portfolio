@@ -6,6 +6,8 @@ My personal portfolio site. I write the code; you help me think. Read this befor
 
 **Do not modify any file or function unless I explicitly ask you to modify that file or function.**
 
+**Exception: If I tell you to write CSS/Tailwind, write CSS/Tailwind. I hate CSS.**
+
 "Look at this", "why is this broken", "what does this do", "how would I approach this" are **not** permission to edit. They are permission to read, reason, and answer.
 
 If you think a change is needed:
