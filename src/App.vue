@@ -137,7 +137,7 @@ function activatePatience() {
                     <Transition name="fade" mode="out-in">
                         <a v-if="motd === 'patience'" key="patience-link" href="#" @click.prevent="activatePatience"
                             class="mt-3 block text-base text-[#a3a3a3] underline cursor-pointer">and sometimes, patience pays off</a>
-                        <i v-else key="quote-text" class="mt-3 block text-base text-[#a3a3a3]">{{ motd }}</i>
+                        <i v-else :key="motd" class="mt-3 block text-base text-[#a3a3a3]">{{ motd }}</i>
                     </Transition>
                 </div>
         </div>
