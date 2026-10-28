@@ -152,7 +152,7 @@ function activateThis() {
 
         <!-- hero -->
         <div
-            class="mt-3.5 min-h-[90vh] p-5 bg-[url(./assets/fall.webp)] bg-cover bg-center rounded-lg flex flex-col justify-center text-center">
+            class="mt-3.5 min-h-[90vh] p-5 bg-cover bg-center rounded-lg flex flex-col justify-center text-center bg-[url(./assets/fall.webp)]">
                 <div class="self-center rounded-lg bg-[#111111] px-6 py-5">
                     <b class="block text-5xl text-white">Caleb Wietholter</b>
                     <Transition name="fade" mode="out-in">
