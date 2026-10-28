@@ -5,6 +5,8 @@ import { ref, onMounted, onUnmounted } from 'vue';
 let egg = ref(false);
 let homecoming = ref(false);
 let homeClicks = ref(0);
+let thisActive = ref(false);
+
 let homeName = ref("Home");
 function activateEgg() {
     document.title = "memory lane";
@@ -51,6 +53,11 @@ onUnmounted(() => {
 function activatePatience() {
     patienceActive.value = true;
     document.title = "patience";
+}
+
+function activateThis() {
+    thisActive.value = true;
+    document.title = "the other side";
 }
 </script>
 
@@ -100,6 +107,20 @@ function activatePatience() {
         <p>then let me. it will only be, just a little while longer.</p>
         <p class="text-slate-900">fine. have your way.</p>
         <p>do not worry. it will all be over soon.</p>
+    </div>
+
+    <div v-else-if="thisActive" class="min-h-screen w-full bg-black flex justify-center items-center">
+        <div class="text-white font-serif flex flex-col items-center">
+            <p>Some things in a person's life are meant to go by unnoticed.</p>
+            <p>Unseen, hidden behind the guise of something normal.</p>
+            <p>Why then, I ask, are you here? To find secrets?</p>
+            <p>Could be. Also could just be something put here to amuse you, to waste your time.</p>
+            <p>Only I will ever know what I did. You, through hours of searching, will find only hints.</p>
+            <p>You have your own secrets to guard. Things you would rather leave undiscovered.</p>
+            <p class="text-black">.</p>
+            <p>What are you doing here? You don't belong here!</p>
+            <p class="text-blue-600 underline"><a href="https://uhsband.net">Back to Home</a></p>
+        </div>
     </div>
 
     <div v-else class="min-h-screen p-3.5 bg-black text-white">
@@ -194,7 +215,7 @@ function activatePatience() {
         <!-- Projects section (here we go) -->
         <div id="projects" class="mt-3.5 p-5 bg-[#111111] rounded-lg">
             <b class="block text-3xl text-white">Projects</b>
-            <p class="mt-3 text-[#a3a3a3]">Now THIS is what you're here for.</p>
+            <p class="mt-3 text-[#a3a3a3]">Now <a @click="activateThis">THIS</a> is what you're here for.</p>
             <div class="mt-6 flex flex-wrap justify-center gap-6">
                 <div
                     class="w-70 max-w-full aspect-9/16 flex flex-col overflow-hidden rounded-xl bg-[#171717] p-3">
