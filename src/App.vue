@@ -126,7 +126,7 @@ function activateThis() {
     <div v-else class="min-h-screen p-3.5 bg-black text-white">
         <div id="top"></div>
         <!-- top bar -->
-        <div class="sticky top-3.5 z-50 py-1.5 px-2 bg-[#111111] border border-[#1f1f1f] rounded-lg">
+        <div class="sticky top-3.5 z-50 py-1.5 px-2 bg-[#111111] rounded-lg">
             <div class="grid grid-cols-[1fr_auto_1fr] items-center">
                 <div class="justify-self-start pl-2 font-semibold text-[#fafafa]">
                     <b>Caleb Wietholter</b>
@@ -246,9 +246,9 @@ function activateThis() {
                 <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
                     class="flex items-center gap-2 py-1.5 px-3 rounded-md text-sm font-medium text-[#a3a3a3] transition-colors hover:bg-[#1f1f1f] hover:text-[#fafafa]"><i
                         class="iconoir-linkedin" />LinkedIn (soon)</a>
-                <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
+                <a href="https://raw.githubusercontent.com/wietyy/wietyy/main/resume.pdf"
                     class="flex items-center gap-2 py-1.5 px-3 rounded-md text-sm font-medium text-[#a3a3a3] transition-colors hover:bg-[#1f1f1f] hover:text-[#fafafa]"><i
-                        class="iconoir-attachment" />Get my Resume (soon)</a>
+                        class="iconoir-attachment" />Get my Resume</a>
             </div>
         </div>
     </div>
